@@ -92,10 +92,22 @@ function getWinner(square){
     // if(square.every(Element => Element != null)){
     //     status = "Game Over! Winner is: " + winner;
     // }
+    const [color, setColor] = useState("Default");
     return (
       <>
         <div>
           <App />
+        </div>
+        <div>
+            <p>
+                Pick a Board Background color:{' '}
+                <select value = {color} onChange={e => setColor(e.target.color)}>
+                <option value="Light">Light</option>
+                <option value="Dark">Dark</option>
+                <option value="Default">Default</option>
+
+                </select>
+            </p>
         </div>
         <div className = "boardWrapper">
             <div className="status">{status}</div>
