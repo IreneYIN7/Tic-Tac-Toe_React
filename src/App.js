@@ -1,6 +1,6 @@
 import './style.css';
 import { useState } from 'react';
-
+import TimeComponent from './TimeComponent.js';
 
   function App() {
     return (
@@ -142,6 +142,7 @@ function getWinner(square){
             <div>
                 <RestartButtom onClick={handleRestartGame}/>
             </div>
+            <TimeComponent />
         </div>
         
     );
