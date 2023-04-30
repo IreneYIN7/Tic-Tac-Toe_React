@@ -71,9 +71,11 @@ function getWinner(square){
 
 
  function Board({xisNext, square, setXisNext, setSquares}) {
-   
+    /**
+     * After Click UI.
+     */
     function opClick(i){
-        // if square[i] is already filled
+        // if squares are already filled or there is alreayd a winner, NO interaction.
         if(square[i] || getWinner(square)) return;
         const nextSquare = square.slice();
         if (xisNext) nextSquare[i] = "X";
@@ -85,6 +87,7 @@ function getWinner(square){
     const winner = getWinner(square);
     let status;
     if(winner!= null) status = "Game Over! Winner is: " + winner;
+    if(winner == null && square.every(element => element != null)) status = "Hey! It's a Tie! Do you want to start again?"
     else status = "Next Player : " + (xisNext ? "X" : "O");
     // if(square.every(Element => Element != null)){
     //     status = "Game Over! Winner is: " + winner;
