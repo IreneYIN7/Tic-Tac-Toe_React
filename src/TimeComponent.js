@@ -1,4 +1,4 @@
-import './style.css';
+import './App.css';
 import { useState, useEffect} from 'react';
 
 
@@ -30,9 +30,9 @@ export default function TimeComponent(){
             <p>
                 Pick a color:{' '}
                 <select value = {color} onChange={e => setColor(e.target.color)}>
-                <option value="lightcoral">lightcoral</option>
-                <option value="midnightblue">midnightblue</option>
-                <option value="rebeccapurple">rebeccapurple</option>
+                    <option value="lightcoral">lightcoral</option>
+                    <option value="midnightblue">midnightblue</option>
+                    <option value="rebeccapurple">rebeccapurple</option>
 
                 </select>
             </p>

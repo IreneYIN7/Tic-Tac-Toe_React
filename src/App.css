@@ -1,15 +1,23 @@
 
 
-body {
-  text-align: center;
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
-}
-
 ol, ul {
   padding-left: 30px;
 }
+.Game{
+  text-align: center;
+}
 
+.appHeader{
+  background-color: #f4f4f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  /* color: white; */
+
+}
 /* .board-row:after {
   align-items: center;
   clear: both;

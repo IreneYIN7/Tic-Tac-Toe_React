@@ -1,4 +1,4 @@
-import './style.css';
+import './App.css';
 import { useState } from 'react';
 import TimeComponent from './TimeComponent.js';
 
@@ -6,9 +6,9 @@ import TimeComponent from './TimeComponent.js';
     return (
         // JSX
         <div className="welcomeMessage">
-            <h1>Welcome to Tic-Tac-Toe Game </h1>
-            <h2>Instructions:</h2>
-            <h3>Click on the block on the board below to make your move! </h3>
+                <h1>Welcome to Tic-Tac-Toe Game </h1>
+                <h2>Instructions:</h2>
+                <h3>Click on the block on the board below to make your move! </h3>
         </div>
     );
   }
@@ -144,20 +144,21 @@ function getWinner(square){
     }
 
     return (
-        <div>
-            
-            <div>
-                <Board 
-                    xisNext={xisNext}
-                    square={square}
-                    setXisNext={setXisNext}
-                    setSquares={setSquares}
-                />
-            </div>
-            <div>
-                <RestartButtom onClick={handleRestartGame}/>
-            </div>
-            <TimeComponent />
+        <div className = 'Game'>
+            <header className = 'appHeader'>
+                <div>
+                    <Board 
+                        xisNext={xisNext}
+                        square={square}
+                        setXisNext={setXisNext}
+                        setSquares={setSquares}
+                    />
+                </div>
+                <div>
+                    <RestartButtom onClick={handleRestartGame}/>
+                </div>
+                <TimeComponent />
+            </header>
         </div>
         
     );
